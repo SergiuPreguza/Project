@@ -1,0 +1,155 @@
+<DOCTYPE html>
+
+<html lang="en-US">
+		
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./CSS/styles.css">
+	<link rel="icon" type="image/x-icon" href="./images/icon.png">
+	<title>Project</title>
+</head>
+		
+<body>
+		
+<nav>
+	<div class="logo">
+		<a href="./index.html"><img src="./images/logo.png"  alt="Project M"></a>
+	</div>
+		
+	<div class="allcategories">
+		<button class="allcategoriesbutton">
+			<img src="./images/menuthreelines.png" alt="Three Lines" class="threelinesmenu">
+			<p>All categories</p>
+		</button>
+
+		<div class="dropdown" id="dropdown">
+			<img src="./images/silver.png" class="dropdownimage1" id="dropdownimage1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
+			<img src="./images/wikipedialogo.png" class="dropdownimage2" id="dropdownimage2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">
+			<img src="./images/cssformatsicon.png" class="dropdownimage3" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
+
+			<div class="dropdown-content">
+
+			<button class="drp-btn drp-btn-1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
+			<a href="https://metallicss.com/" class="dropdowna1">Inspiration site</a>
+			</button>
+
+			<button class="drp-btn drp-btn-2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">	
+			<a href="https://en.wikipedia.org/wiki/Metallic_color" class="dropdowna2">Metallic colors Wiki</a>
+			</button>
+
+			<button class="drp-btn drp-btn-3" class="dropdowna3" onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
+			<a href="https://www.joshwcomeau.com/css/color-formats/" class="dropdowna3">CSS Color Formats</a>
+			</button>
+
+			</div>
+		</div>
+
+	</div>
+		
+	<div class="searchbar">
+		<form action="https://google.com/search" method="get">
+			<input type="text" class="search-data" name="q" placeholder="Search...">
+			<button type="submit" class="search">
+				<img src="./images/search.png" title="Căutare">
+			</button>
+		</form>
+	</div>
+		
+	<div class="aboutmenav">
+		<a href="./aboutme.html">
+			<button>	
+				<img src="./images/aboutme.png" alt="About me" title="About me">	
+			</button>
+		</a>
+	</div>
+		
+	<div class="notifications">
+		<button>
+				<img src="./images/notificationbefore.png" alt="Notifications" title="Notifications">
+		</button>
+	</div>
+		
+	<div class="login">
+		<button onclick="document.getElementById('loginform').style.display='block'">
+			<img src="./images/authentification.png" alt="Login" title="Login">
+		</button>
+	</div>
+	<div class="darkmodenav">
+		<button class="darkmodebutton" id="dark-mode-toggle">
+			<img src="./images/moon.png" alt="Dark Mode" title="Dark Mode" id="moon">
+			<img src="./images/sun.png" alt="Light Mode" title="Light Mode" id="sun">
+		</button>
+	</div>
+					<script src="./JavaScript/darkmode.js"></script>
+</nav>
+						
+<div id="loginform" class="loginform">
+	<form class="loginform-content animate">
+		<div class="xbutton">
+			<span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close">&times;</span>
+		</div>
+		
+		<div class="loginwindow">
+			<label for="username"><b>Username:</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required class="username">
+			<label for="password"><b>Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required class="password">
+			<label><input type="checkbox" name="remember"><span class="remember">Remember me</span></label>
+			<button type="submit" class="submitbutton">Log In</button>
+		</div>
+		
+		<div class="forgot">
+			<a href="#">Forgot password?</a>
+		</div>
+		
+		<div>
+			<button onclick="document.getElementById('loginform').style.display='none'" class="cancelbutton">Cancel</button>
+		</div>
+		
+		<div class="newuser">
+			Need an account?<a href="#"onclick="document.getElementById('loginform').style.display='none'; document.getElementById('signupform').style.display='block' " class="formswitch">SIGN UP</a>
+		</div>
+	</form>
+					<script src="./JavaScript/loginform.js"></script>
+</div>
+		
+<div id="signupform" class="signupform">
+	<form class="signupform-content animate">
+		<div class="xbutton">
+			<span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close">&times;</span>
+		</div>
+		
+		<div class="signupwindow">
+			<label for="username"><b>Username:</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required class="username">
+			<label for="password"><b>Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required class="password" id="password" onkeyup="checkPass()">
+			<label for="confirmpassword"><b>Repeat Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="confirmpassword" required class="confirmpassword" id="confirmpassword" onkeyup="checkPass()">
+			<div id="message"></div>
+			<label><input type="checkbox" name="remember"><span class="terms"> I have read and agree to the <a href="">privacy policy</a> and <a href="">terms of service</a>.</span></label>
+			<button type="submit" class="submitbutton" id="submitbutton">Sign Up</button>
+					<script src="./JavaScript/passwordmatching.js"></script>
+		</div>
+		
+		<div>
+			<button onclick="document.getElementById('signupform').style.display='none'" class="cancelbutton">Cancel</button>
+		</div>
+		
+		<div class="newuser">
+			Already a user?<a href="#" onclick="document.getElementById('signupform').style.display='none'; document.getElementById('loginform').style.display='block' " class="formswitch">LOGIN</a>
+		</div>
+	</form>
+					<script src="./JavaScript/signupform.js"></script>
+</div>
+		
+<footer class="footer">
+	<code>v1.1.0</code> • &copy; 2022-present Sergiu Preguza. All Rights Reserved. •
+</footer>
+		
+</body>
+</html>
