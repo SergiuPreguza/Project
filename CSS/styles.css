@@ -21,10 +21,11 @@
 }
 
 body {
-    padding: 25px;
-    font-size: 25px;
-    background-color: var(--dark-blue-background);
-    color: var(--light-gray-text);
+	padding: 25px;
+	font-size: 25px;
+	background-color: var(--dark-blue-background);
+	color: var(--light-gray-text);
+	overflow-x: hidden;
 }
 
 .footer {
@@ -214,6 +215,10 @@ nav form input {
 .aboutmenav button:hover {
 	border: 1px solid gray;
 	transition: 0.3s;
+}
+
+.aboutmenav button a {
+	display: block;
 }
 
 .aboutmenav button img {

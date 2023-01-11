@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./CSS/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="icon" type="image/x-icon" href="./Images/icon.png">
     <title>About Me</title>
 </head>
             
@@ -19,20 +19,20 @@
 <nav>
     <div class="logo">
         <a href="./index.html">
-            <img src="./images/logo.png"  alt="Project M">
+            <img src="./Images/logo.png"  alt="Project M">
         </a>
     </div>
             
     <div class="allcategories">
         <button class="allcategoriesbutton">
-            <img src="./images/menuthreelines.png" alt="Three Lines" class="threelinesmenu">
+            <img src="./Images/menuthreelines.png" alt="Three Lines" class="threelinesmenu">
             <p>All categories</p>
         </button>
 
         <div class="dropdown" id="dropdown">
-            <img src="./images/silver.png" class="dropdownimage1" id="dropdownimage1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
-            <img src="./images/wikipedialogo.png" class="dropdownimage2" id="dropdownimage2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">
-            <img src="./images/cssformatsicon.png" class="dropdownimage3" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
+            <img src="./Images/silver.png" class="dropdownimage1" id="dropdownimage1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
+            <img src="./Images/wikipedialogo.png" class="dropdownimage2" id="dropdownimage2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">
+            <img src="./Images/cssformatsicon.png" class="dropdownimage3" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
             
             <div class="dropdown-content">
             <button class="drp-btn drp-btn-1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
@@ -54,30 +54,30 @@
         <form action="https://google.com/search" method="get">
             <input type="text" class="search-data" name="q" placeholder="Search...">
             <button type="submit" class="search">
-                <img src="./images/search.png" title="Căutare">
+                <img src="./Images/search.png" title="Căutare">
             </button>
         </form>
     </div>   
 
     <div class="aboutmenav">
         <button>
-            <a href="./aboutme.html"><img src="./images/aboutme.png" alt="About me" title="About me"></a>
+            <a href="./aboutme.html"><img src="./Images/aboutme.png" alt="About me" title="About me"></a>
         </button>
     </div>    
 
     <div class="notifications">
         <button>
-                <img src="./images/notificationbefore.png" alt="Notifications" title="Notifications">
+                <img src="./Images/notificationbefore.png" alt="Notifications" title="Notifications">
         </button>
     </div>
             
     <div class="login">
         <button onclick="document.getElementById('loginform').style.display='block'">
-            <img src="./images/authentification.png" alt="Login" title="Login">
+            <img src="./Images/authentification.png" alt="Login" title="Login">
         </button>
         <button class="darkmodebutton" id="dark-mode-toggle">
-            <img src="./images/moon.png" alt="Dark Mode" title="Dark Mode" id="moon">
-            <img src="./images/sun.png" alt="Light Mode" title="Light Mode" id="sun">
+            <img src="./Images/moon.png" alt="Dark Mode" title="Dark Mode" id="moon">
+            <img src="./Images/sun.png" alt="Light Mode" title="Light Mode" id="sun">
         </button>
     </div>
                     <script src="./JavaScript/darkmode.js"></script>
@@ -120,16 +120,18 @@
             <span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close">&times;</span>
         </div>
             
-        <div class="signupwindow">
-            <label for="username"><b>Username:</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required class="username">
-            <label for="password"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required class="password">
-            <label for="password2"><b>Repeat Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="password2" required class="password2">
-            <label><input type="checkbox" name="remember"><span class="terms"> I have read and agree to the <u>privacy policy</u> and <u>terms of service</u>.</span></label>
-            <button type="submit" class="submitbutton">Sign Up</button>
-        </div>
+		<div class="signupwindow">
+			<label for="username"><b>Username:</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required class="username">
+			<label for="password"><b>Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required class="password" id="password" onkeyup="checkPass()">
+			<label for="confirmpassword"><b>Repeat Password:</b></label>
+			<input type="password" placeholder="Enter Password" name="confirmpassword" required class="confirmpassword" id="confirmpassword" onkeyup="checkPass()">
+			<div id="message"></div>
+			<label><input type="checkbox" name="remember"><span class="terms"> I have read and agree to the <a href="">privacy policy</a> and <a href="">terms of service</a>.</span></label>
+			<button type="submit" class="submitbutton" id="submitbutton">Sign Up</button>
+					<script src="./JavaScript/passwordmatching.js"></script>
+		</div>
             
         <div>
             <button onclick="document.getElementById('signupform').style.display='none'" class="cancelbutton">Cancel</button>
@@ -142,12 +144,12 @@
                     <script src="./JavaScript/signupform.js"></script>
 </div>
     
-<a href="https://www.linkedin.com/in/sergiu-preguza-544466250/" target="_blank"><img src="./images/linkedin.png" alt="LinkedIn Profile" class="aboutmeicons" id="icon1"></a>
-<a href="https://github.com/SergiuPreguza" target="_blank"><img src="./images/github.png" alt="GitHub Profile" class="aboutmeicons" id="icon2"></a>
-<a href="https://www.facebook.com/sergiu.preguza.5" target="_blank"><img src="./images/facebook.png" alt="Facebook Profile" class="aboutmeicons" id="icon3"></a>
+<a href="https://www.linkedin.com/in/sergiu-preguza-544466250/" target="_blank"><img src="./Images/linkedin.png" alt="LinkedIn Profile" class="aboutmeicons" id="icon1"></a>
+<a href="https://github.com/SergiuPreguza" target="_blank"><img src="./Images/github.png" alt="GitHub Profile" class="aboutmeicons" id="icon2"></a>
+<a href="https://www.facebook.com/sergiu.preguza.5" target="_blank"><img src="./Images/facebook.png" alt="Facebook Profile" class="aboutmeicons" id="icon3"></a>
 
 <div class="aboutme">
-    <img src="./images/avatar.png" alt="Avatar Picture">
+    <img src="./Images/avatar.png" alt="Avatar Picture">
 <p> Im a highly motivated TUM student looking for an intership to strengthen my skills and aquire best
 practices from the industry. Prior to university, I was passionated about Informatics (mention at
 National Informatics Olympiad) and robotics (got 4th place at First Lego League together with my
