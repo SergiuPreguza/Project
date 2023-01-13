@@ -1,8 +1,17 @@
 :root {
 	--white: #ffffff;
 	--black: #000000;
-	--dark-blue-background: hsl(210deg, 30%, 8%);
-	--light-blue-background: hsl(210deg, 38%, 15%);
+	--background: hsl(210deg, 30%, 8%);
+	--navbar-background: hsl(210deg, 38%, 15%);
+	--navbar-form-background: hsl(210deg, 30%, 8%);
+	--navbar-text-color: #a1aab1;
+	--icons-background: #10566f;
+	--aboutme-background: hsl(210deg, 30%, 15%);
+	--aboutme-text-color: #10566f;
+	--navbar-form-text-color: #a1aab1;
+	--text-color: #a1aab1;
+	--login-background: hsl(210deg, 38%, 15%);
+	--login-text-color: #a1aab1;
 	--dark-blue-text: #10566f;
 	--color-blue: rgb(97, 123, 255);
 	--light-blue-text: #1095c1;
@@ -23,7 +32,7 @@
 body {
 	padding: 25px;
 	font-size: 25px;
-	background-color: var(--dark-blue-background);
+	background-color: var(--background);
 	color: var(--light-gray-text);
 	overflow-x: hidden;
 	height: 100vh;
@@ -41,7 +50,7 @@ body {
 }
 
 nav {
-	background-color: var(--light-blue-background);
+	background-color: var(--navbar-background);
 	display: flex;
 	align-items: center;
 	height: 64px;
@@ -71,7 +80,7 @@ nav form {
 	border: 0px;
 	border-radius: 10px;
 	padding: 2px;
-	background-color: var(--dark-blue-background);
+	background-color: var(--navbar-form-background);
 	margin-left: 10px;
 	width: 550px;
 }
@@ -83,7 +92,7 @@ nav form .search-data {
 	font-weight: 500;
 	background: none;
 	border: none;
-	color: var(--light-blue-text);
+	color: var(--navbar-text-color);
 }
 
 nav form button{
@@ -97,7 +106,7 @@ nav form button{
 nav form button img {
 	width: 40px;
 	height: 40px;
-	background-color: var(--light-blue-background);
+	background-color: var(--navbar-background);
 	border-radius: 10px;
 	padding: 5px;
 }
@@ -115,7 +124,7 @@ nav form input {
 
 .allcategoriesbutton {
 	border: 0px;
-	background-color: var(--light-blue-background);
+	background-color: var(--navbar-background);
 	color: var(--gray-text);
 	cursor: pointer;
 	border-radius: 5px;
@@ -131,11 +140,11 @@ nav form input {
 	padding-right: 5px;
 	font-weight: 500;
 	margin-left: 5px;
-	color: var(--dark-blue-text);
+	color: var(--navbar-text-color);
 }
 
 .allcategoriesbutton:hover {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,1);
 	transition: 1s;
 }
 
@@ -146,7 +155,7 @@ nav form input {
 .dropdown {
 	display: none;
 	position: absolute;
-	background-color: var(--light-blue-background);
+	background-color: var(--navbar-background);
 	box-shadow: 20px rgba(0,0,0,0.9);
 	padding-top: 9px;
 	font-size: 20px;
@@ -187,7 +196,7 @@ nav form input {
 	cursor: pointer;
 }
 .dropdown a {
-	color: var(--dark-blue-text);
+	color: var(--navbar-text-color);
 	text-decoration: none;
 	text-align: left;
 	padding: 10px;
@@ -269,8 +278,8 @@ nav form input {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	margin-top: 35px;
-	background-color: var(--light-blue-background);
-	color: var(--dark-blue-text);
+	background-color: var(--navbar-background);
+	color: var(--navbar-text-color);
 	padding: 10px 5px 5px 5px;
 	box-sizing: border-box;
 	width: 250px;
@@ -294,7 +303,7 @@ nav form input {
 }
 
 .notification:hover {
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,1);
 }
 
 .login {
@@ -333,15 +342,34 @@ nav form input {
 }
 
 .darkmode {
-	background-color: var(--dark-blue-background);
+	--navbar-background: hsl(210deg, 38%, 15%);
+	--navbar-text-color: #a1aab1;
+	--navbar-form-background: hsl(210deg, 30%, 8%);
+	--icons-background: #10566f;
+	--aboutme-background: hsl(210deg, 30%, 15%);
+	--aboutme-text-color: #10566f;
+	--login-background: hsl(210deg, 30%, 8%);
+	--login-text-color: #a1aab1;
+	background-color: var(--background);
 	color: var(--light-gray-text);
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 .lightmode {
+	--navbar-background: #232023;
+	--navbar-text-color: #a1aab1;
+	--navbar-form-background: rgb(51, 51, 51);
+	--dark-blue-background: #467790;
+	--light-blue-text: black;
+	--dark-blue-text: black;
+	--icons-background: rgb(60, 60, 60);
+	--aboutme-background: rgb(45, 45, 45);
+	--aboutme-text-color: #a1aab1;
+	--login-background: rgb(180, 180, 180);
+	--login-text-color: black;
 	background-color: var(--white);
 	color: var(--black);
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 #moon {
@@ -374,7 +402,6 @@ nav form input {
 
 .darkmodebutton:hover {
 	border: 1px solid gray;
-	transition: 0.3s;
 }
 
 .username, .password, .confirmpassword{
@@ -423,8 +450,8 @@ nav form input {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgba(0,0,0,0.4);
-	color: var(--light-gray-text);
+	background-color: rgba(0,0,0,0.5);
+	color: var(--login-text-color);
 }
 
 .loginform {
@@ -437,11 +464,11 @@ nav form input {
 	height: 100%;
 	overflow: auto;
 	background-color: rgba(0,0,0,0.5);
-	color: var(--light-gray-text);
+	color: var(--login-text-color);
 }
 
 .loginform-content {
-	background-color: var(--light-blue-background);
+	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
 	border: 1px solid gray;
@@ -451,7 +478,7 @@ nav form input {
 }
 
 .signupform-content {
-	background-color: var(--light-blue-background);
+	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
 	border: 1px solid gray;
@@ -462,7 +489,7 @@ nav form input {
 
 .terms {
 	font-size: 15px;
-	color: var(--light-gray-text);
+	color: var(--login-text-color);
 } 
 
 .loginwindow, .signupwindow {
@@ -523,8 +550,8 @@ code {
 .aboutme {
 	width: 50%;
 	border-radius: 20px;
-	background-color: var(--light-blue-background);
-	color: var(--dark-blue-text);
+	background-color: var(--aboutme-background);
+	color: var(--aboutme-text-color);
 	padding: 15;
 	margin: auto;
 }
@@ -533,12 +560,13 @@ code {
 	width: 17%;
 	height: 17%;
 	float: left;
+	margin-right: 10px;
 }
 
 .aboutmeicons {
 	width: 50px;
 	height: 50px;
-	background-color: var(--dark-blue-text);
+	background-color: var(--icons-background);
 	border-radius: 10px;
 	margin: 5px;
 	position: absolute;
