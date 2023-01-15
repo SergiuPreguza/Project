@@ -19,6 +19,7 @@
 	--light-gray-text: #a1aab1;
 	--red: #ff3535;
 	--green: #439747;
+	--checkbox-border: hsl(210deg, 38%, 15%);
 }
 
 * {
@@ -57,7 +58,7 @@ nav {
 	border-radius: 10px;
 	width: 70%;
 	margin: auto;
-	margin-bottom: 30px;
+	margin-bottom: 85px !important;
 }
 
 .logo a {
@@ -350,9 +351,11 @@ nav form input {
 	--aboutme-text-color: #10566f;
 	--login-background: hsl(210deg, 30%, 8%);
 	--login-text-color: #a1aab1;
+	--checkbox-border: hsl(210deg, 30%, 15%);;
 	background-color: var(--background);
 	color: var(--light-gray-text);
 	transition: 0.3s;
+
 }
 
 .lightmode {
@@ -367,6 +370,7 @@ nav form input {
 	--aboutme-text-color: #a1aab1;
 	--login-background: rgb(180, 180, 180);
 	--login-text-color: black;
+	--checkbox-border: #a1aab1;
 	background-color: var(--white);
 	color: var(--black);
 	transition: 0.3s;
@@ -511,6 +515,10 @@ nav form input {
 	font-weight: bold;
 }
 
+.xbutton:hover {
+	color: var(--red);
+}
+
 .forgot {
 	float: right;
 	margin-right: 5px;
@@ -573,18 +581,56 @@ code {
 }
 
 #icon1 {
-	top: 12.5%;
+	top: 18%;
 	left: 22%;
 }
 
 #icon2 {
-	top: 18.5%;
+	top: 24%;
 	left: 22%;
 }
 
 #icon3 {
-	top: 24.5%;
+	top: 30%;
 	left: 22%;
+}
+
+.checkbox-wrapper {
+	list-style: none;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+
+.checkbox {
+	border-style: solid;
+	border-width: 2px;
+	border-color: transparent;
+	margin: 2em;
+	padding: 0.5em;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 5px;
+	align-items: center;
+}
+
+.credits {
+	font-size: small;
+	color: var(--gray-text);
+	padding-top: 30px;
+}
+
+.checkbox:hover {
+	cursor: pointer;
+	border-color: var(--checkbox-border);
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
 }
 
 @-webkit-keyframes animatezoom {
