@@ -36,18 +36,18 @@ body {
 	background-color: var(--background);
 	color: var(--light-gray-text);
 	overflow-x: hidden;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
+	bottom: 0%;
 	height: 40px;
 	width: 100%;
 	margin-top: 40px;
 	text-align: center;	
 	font-size: 18px;
+	display: block;
 }
 
 nav {
