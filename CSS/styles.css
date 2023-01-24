@@ -4,14 +4,16 @@
 	--background: hsl(210deg, 30%, 8%);
 	--navbar-background: hsl(210deg, 38%, 15%);
 	--navbar-form-background: hsl(210deg, 30%, 8%);
+	--navbar-form-text: #a1aab1;
 	--navbar-text-color: #a1aab1;
-	--icons-background: #10566f;
-	--aboutme-background: hsl(210deg, 30%, 15%);
-	--aboutme-text-color: #10566f;
+	--icons-background: #1f2b38;
+	--aboutme-background: 	#1f2b38;
+	--aboutme-text-color: #a1aab1;
 	--navbar-form-text-color: #a1aab1;
 	--text-color: #a1aab1;
 	--login-background: hsl(210deg, 38%, 15%);
 	--login-text-color: #a1aab1;
+	--login-border: white;
 	--dark-blue-text: #10566f;
 	--color-blue: rgb(97, 123, 255);
 	--light-blue-text: #1095c1;
@@ -48,6 +50,17 @@ body {
 	text-align: center;	
 	font-size: 18px;
 	display: block;
+}
+
+.absolute-footer {
+	bottom: 0%;
+	height: 40px;
+	width: 100%;
+	margin-top: 40px;
+	text-align: center;	
+	font-size: 18px;
+	display: block;
+	position: absolute;
 }
 
 nav {
@@ -93,7 +106,7 @@ nav form .search-data {
 	font-weight: 500;
 	background: none;
 	border: none;
-	color: var(--navbar-text-color);
+	color: var(--navbar-form-text);
 }
 
 nav form button{
@@ -346,11 +359,13 @@ nav form input {
 	--navbar-background: hsl(210deg, 38%, 15%);
 	--navbar-text-color: #a1aab1;
 	--navbar-form-background: hsl(210deg, 30%, 8%);
-	--icons-background: #10566f;
-	--aboutme-background: hsl(210deg, 30%, 15%);
-	--aboutme-text-color: #10566f;
+	--navbar-form-text: #a1aab1;
+	--icons-background: #1f2b38;
+	--aboutme-background: #1f2b38;
+	--aboutme-text-color: #a1aab1;
 	--login-background: hsl(210deg, 30%, 8%);
 	--login-text-color: #a1aab1;
+	--login-border: white;
 	--checkbox-border: hsl(210deg, 30%, 15%);;
 	background-color: var(--background);
 	color: var(--light-gray-text);
@@ -360,16 +375,18 @@ nav form input {
 
 .lightmode {
 	--navbar-background: #232023;
-	--navbar-text-color: #a1aab1;
+	--navbar-text-color: white;
 	--navbar-form-background: rgb(51, 51, 51);
+	--navbar-form-text: white;
 	--dark-blue-background: #467790;
 	--light-blue-text: black;
 	--dark-blue-text: black;
 	--icons-background: rgb(60, 60, 60);
 	--aboutme-background: rgb(45, 45, 45);
-	--aboutme-text-color: #a1aab1;
+	--aboutme-text-color: white;
 	--login-background: rgb(180, 180, 180);
 	--login-text-color: black;
+	--login-border: black;
 	--checkbox-border: #a1aab1;
 	background-color: var(--white);
 	color: var(--black);
@@ -413,7 +430,7 @@ nav form input {
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid gray;
+	border: none;
 	box-sizing: border-box;
 	border-radius: 10px;
 	color: var(--black);
@@ -427,11 +444,11 @@ nav form input {
 	cursor: pointer;
 	width: 100%;
 	border-radius: 5px;
-	border: 1px solid gray;
+	border: none;
 }
 
 .submitbutton:hover, .cancelbutton:hover {
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 .loginform-content .cancelbutton {
@@ -456,6 +473,7 @@ nav form input {
 	overflow: auto;
 	background-color: rgba(0,0,0,0.5);
 	color: var(--login-text-color);
+	overflow-y: hidden;
 }
 
 .loginform {
@@ -475,17 +493,18 @@ nav form input {
 	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
-	border: 1px solid gray;
+	border: 1px solid var(--login-border);
 	width: 25%;
 	height: 45%;
 	border-radius: 25px;
+	scroll-behavior: none;
 }
 
 .signupform-content {
 	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
-	border: 1px solid gray;
+	border: 1px solid var(--login-border);
 	width: 25%;
 	height: 53%;
 	border-radius: 25px;
@@ -538,6 +557,16 @@ nav form input {
 	animation: animatezoom 0.6s
 }
 
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+
 .newuser {
 	font-size: 16px;
 	text-align: center;
@@ -545,10 +574,6 @@ nav form input {
 
 #message {
 	font-size: 15px;
-}
-
-.test {
-	text-align: center;
 }
 
 code {
@@ -610,7 +635,6 @@ code {
 	border-width: 2px;
 	border-color: transparent;
 	margin: 2em;
-	padding: 0.4em;
 	width: 200px;
 	height: 200px;
 	position: relative;
@@ -619,19 +643,19 @@ code {
 	justify-content: center;
 	border-radius: 5px;
 	align-items: center;
+	padding-top: 30px;
 }
 
 .credits {
 	font-size: small;
 	color: var(--gray-text);
-	padding-top: 20px;
-	margin-bottom: 45px;
+	padding-top: 25px;
+	cursor: auto;
 }
 
 .checkbox:hover {
 	border-color: var(--checkbox-border);
 	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
-	margin-top: 21px;	
 	cursor: pointer;
 }
 
@@ -645,11 +669,11 @@ code {
 	color: var(--white);
 	font-size: 14px;
 	padding: 0.4em;
-	top: 5px;
+	top: 10px;
+	left: 10px;
 	border-radius: 2px;
-	margin-bottom: 30px;
 	display: none;
-	position: relative;
+	position: absolute;
 	align-self: flex-start;
 	pointer-events: none;
 }
@@ -658,14 +682,4 @@ code {
 	width: 20px;
 	height: 15px;
 	padding-right: 5px; 
-}
-
-@-webkit-keyframes animatezoom {
-	from {-webkit-transform: scale(0)} 
-	to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-	from {transform: scale(0)} 
-	to {transform: scale(1)}
 }
