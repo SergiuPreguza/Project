@@ -74,12 +74,17 @@ nav {
 	margin-bottom: 85px !important;
 }
 
+.logo {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
 .logo a {
 	display: block;
 	height: 63px;
 	width: 250px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 .logo a img {
@@ -95,11 +100,16 @@ nav form {
 	border-radius: 10px;
 	padding: 2px;
 	background-color: var(--navbar-form-background);
-	margin-left: 10px;
-	width: 550px;
+	margin-left: 5%;
+	width: 175%;
 }
 
-nav form .search-data {
+.searchbar {
+	left: 0;
+	margin-left: 0;
+}
+
+nav .searchbar form .search-data {
 	height: 100%;
 	width: 100%;
 	padding: 0 10px;
@@ -138,13 +148,16 @@ nav form input {
 
 .allcategoriesbutton {
 	border: 0px;
-	background-color: var(--navbar-background);
+	background-color: transparent;
 	color: var(--gray-text);
 	cursor: pointer;
 	border-radius: 5px;
 	display: flex;
 	margin-left: 0;
-	padding: 10 10;
+	margin-right: -25%;
+	padding: 7 11 7 11;
+	padding-bottom: 19.5px;
+	padding-top: 19.5px;
 }
 
 .allcategoriesbutton p {
@@ -153,13 +166,17 @@ nav form input {
 	padding-left: 1px;
 	padding-right: 5px;
 	font-weight: 500;
-	margin-left: 5px;
+	margin-left: 10px;
 	color: var(--navbar-text-color);
 }
 
 .allcategoriesbutton:hover {
 	background-color: rgba(0,0,0,1);
-	transition: 1s;
+	transition: 1s all ease;
+}
+
+.allcategoriesbutton:hover .allcategories, .allcategoriesbutton:hover .allcategoriesbutton p{
+	position: absolute;
 }
 
 .allcategories:hover .dropdown{
@@ -171,7 +188,6 @@ nav form input {
 	position: absolute;
 	background-color: var(--navbar-background);
 	box-shadow: 20px rgba(0,0,0,0.9);
-	padding-top: 9px;
 	font-size: 20px;
 	width: 18%;
 	height: 15%;
@@ -223,7 +239,7 @@ nav form input {
 }
 
 .aboutmenav {
-	margin-left: 30px;
+	margin-left: 21%;
 	align-items: right;
 }
 
@@ -255,7 +271,7 @@ nav form input {
 }
 
 .notifications {
-	margin-left: 25px;
+	margin-left: 2%;
 	display: flex;
 	position: relative;
 }
@@ -297,7 +313,7 @@ nav form input {
 	padding: 10px 5px 5px 5px;
 	box-sizing: border-box;
 	width: 250px;
-	left: -68px;
+	left: -67px;
 	font-size: 18px;
 }
 
@@ -344,6 +360,11 @@ nav form input {
 	height: 30px;
 	border-radius: 5px;
 	background: transparent;
+}
+
+.darkmodenav {
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 .darkmodenav button {
@@ -415,7 +436,6 @@ nav form input {
 .darkmodebutton {
 	background: transparent;
 	cursor: pointer;
-	margin-left: 25px;
 	width: 35px;
 	height: 35px;
 	border-radius: 5px;
@@ -495,7 +515,7 @@ nav form input {
 	padding: 10px 15px;
 	border: 1px solid var(--login-border);
 	width: 25%;
-	height: 45%;
+	height: 415px;
 	border-radius: 25px;
 	scroll-behavior: none;
 }
@@ -506,7 +526,7 @@ nav form input {
 	padding: 10px 15px;
 	border: 1px solid var(--login-border);
 	width: 25%;
-	height: 53%;
+	height: 500px;
 	border-radius: 25px;
 }
 
@@ -606,17 +626,17 @@ code {
 }
 
 #icon1 {
-	top: 18%;
+	top: 175px;
 	left: 22%;
 }
 
 #icon2 {
-	top: 24%;
+	top: 235px;
 	left: 22%;
 }
 
 #icon3 {
-	top: 30%;
+	top: 295px;
 	left: 22%;
 }
 
@@ -682,4 +702,289 @@ code {
 	width: 20px;
 	height: 15px;
 	padding-right: 5px; 
+}
+
+@media only screen and (min-width: 1880px) {
+	
+	nav {
+		width: 70%;
+	}
+
+}
+
+@media only screen and (max-width: 1919px) {
+	
+	.notificationsareawrapper {
+		width: 200px;
+		left: -55px;
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 1820px) and (max-width: 1879px) {
+	
+	nav {
+		width: 73%;
+	}
+
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1819px) {
+
+	nav {
+		width: 77%;
+	}
+
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1699px) {
+
+	nav {
+		width: 80%;
+	}
+
+}
+
+@media only screen and (max-width: 1650px) {
+	
+	.logo a {
+		max-width: 230px;
+	}
+
+	.logo a img {
+		width: 230px;
+	}
+	
+	nav form {
+		margin-left: 12%;
+		width: 185%;
+	}
+	
+	.aboutmenav {
+		margin-left: 23.5%;
+	}	
+
+	.logo {	
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	
+	.logo a {
+		width: 250px;
+		margin-left: 1.5%;
+		margin-right: 2%;
+	}
+	
+	.notifications {
+		margin-left: 1.5%;
+	}
+	
+	.login {
+		margin-left: 1.5%;
+	}
+	
+	.darkmodenav {
+		margin-left: 1.5%;
+		margin-right: 2%;
+	}
+	
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1599px) {
+
+	nav {
+		width: 83%;
+	}
+
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1499px) {
+
+	nav {
+		width: 87%;
+	}
+
+}
+
+@media only screen and (max-width: 1450px) { 
+
+	nav form {
+		margin-left: 15%;
+		width: 190%;
+	}
+	
+	.aboutmenav {
+		margin-left: 24%;
+	}	
+
+	#icon1, #icon2, #icon3 {
+		left: 21%;
+	}
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1399px) {
+
+	nav {
+		width: 90%;
+	}
+
+}
+
+@media only screen and (max-width: 1350px) { 
+	
+	nav {
+		width: 100%;
+	}
+
+	nav form {
+		margin-left: 25%;
+		width: 200%;
+	}
+	
+	.aboutmenav {
+		margin-left: 26%;
+	}	
+
+	.dropdown {
+		width: 20%;
+		height: 25%;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1299px) {
+
+	nav {
+		width: 93%;
+	}
+
+	nav form {
+		margin-left: 20%;
+		width: 220%;
+	}
+}
+
+@media only screen and (max-width: 1250px) { 
+	
+	nav form {
+		margin-left: 20%;
+		width: 215%;
+	}
+
+	.aboutmenav {
+		margin-left: 24%;
+	}	
+
+	.dropdown {
+		width: 25%;
+	}
+
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1199px) {
+
+	nav {
+		width: 97%;
+	}
+	
+}
+
+@media only screen and (max-width: 1150px) { 
+
+	nav {
+		width: 100%;
+	}
+
+	nav form {
+		margin-left: 20%;
+		width: 220%;
+	}
+	
+	.aboutmenav {
+		margin-left: 24%;
+	}	
+
+	#icon1, #icon2, #icon3 {
+		left: 20%;
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1099px) {	
+	nav form {
+		margin-left: 20%;
+		width: 215%;
+	}
+		
+	.aboutmenav {
+		margin-left: 22%;
+	}	
+}
+
+@media only screen and (max-width: 1050px) { 	
+	nav form {
+		margin-left: 30%;
+		width: 205%;
+	}
+		
+	.aboutmenav {
+		margin-left: 21%;
+	}	
+
+	.dropdown {
+		width: 35%;
+	}
+
+	.notificationsareawrapper {
+		width: 150px;
+		left: -45px;
+	}
+	
+}
+
+@media only screen and (min-width: 950px) and (max-width: 999px) {
+	nav form {
+		margin-left: 30%;
+		width: 200%;
+	}
+	
+	.aboutmenav {
+		margin-left: 18.5%;
+	}		
+}
+
+@media only screen and (min-width: 900px) and (max-width: 949px) {
+	nav form {
+		margin-left: 30%;
+		width: 230%;
+	}
+	
+	.aboutmenav {
+		margin-left: 18.5%;
+	}		
+}
+
+@media only screen and (min-width: 800px) and (max-width: 899px) {
+
+	.logo a {
+		max-width: 200px;
+	}
+
+	.logo a img {
+		width: 200px;
+	}
+
+	nav form {
+		margin-left: 13%;
+		width: 150%;
+	}
+	
+	.aboutmenav {
+		margin-left: 11%;
+	}		
+
+	.checkbox {
+		margin: 2em;
+		width: 150px;
+		height: 150px;
+	}
 }
