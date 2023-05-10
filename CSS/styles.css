@@ -224,17 +224,22 @@ nav form input {
 	height: 100%;
 	width: 40%;
 }
+
 .drp-btn {
 	width: 60%;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 }
+
 .dropdown a {
-	color: var(--navbar-text-color);
 	text-decoration: none;
+}
+
+.dropdown-text {
+	color: var(--navbar-text-color);
 	text-align: left;
-	padding: 10px;
+	padding-left: 20px;
 	font-size: large;
 }
 
