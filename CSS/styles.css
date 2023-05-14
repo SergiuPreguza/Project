@@ -1,11 +1,11 @@
 :root {
 	--white: #ffffff;
 	--black: #000000;
-	--background: hsl(210deg, 30%, 8%);
-	--navbar-background: hsl(210deg, 38%, 15%);
-	--navbar-form-background: hsl(210deg, 30%, 8%);
-	--navbar-form-text: #a1aab1;
-	--navbar-text-color: #a1aab1;
+	--background: #0d1b2a;
+	--navbar-background: #1b263b;
+	--navbar-form-background: rgba(42,43,56,.5);
+	--navbar-form-text: #5f7adb;
+	--navbar-text-color: #5f7adb;
 	--icons-background: #1f2b38;
 	--aboutme-background: 	#1f2b38;
 	--aboutme-text-color: #a1aab1;
@@ -33,7 +33,6 @@
 }
 
 body {
-	padding: 25px;
 	font-size: 25px;
 	background-color: var(--background);
 	color: var(--light-gray-text);
@@ -67,49 +66,64 @@ nav {
 	background-color: var(--navbar-background);
 	display: flex;
 	align-items: center;
-	height: 64px;
-	border-radius: 10px;
-	width: 70%;
+	height: 70px;
+	width: 100%;
 	margin: auto;
 }
 
-#main-page-nav {
-	margin-bottom: 245px;
-}
-
 .logo {
-	margin-left: 2%;
-	margin-right: 2%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-right: 50px;
+	margin-left: 20px;
 }
 
 .logo a {
-	display: block;
-	height: 63px;
-	width: 250px;
-	margin-left: 2%;
-	margin-right: 2%;
+	display: flex;	
+		text-decoration: none;
+
 }
 
-.logo a img {
-	height: 63px;
-	width: 250px;
+.logo a span {
 	cursor: pointer;
+	font-size: 40px;
+	font-weight: 500;
+	letter-spacing: +.005em;
+	background: -webkit-linear-gradient(135deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff, #e73c7e);
+	background: linear-gradient(-45deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff, #e73c7e);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+	-webkit-animation: gradient 3s ease infinite;
+	animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 nav form {
 	display: flex;
 	height: 46px;
-	border: 0px;
+	border: 1px solid #a2b2ee;
 	border-radius: 10px;
 	padding: 2px;
-	background-color: var(--navbar-form-background);
+	background-color: rgba(42,43,56,.5);
 	margin-left: 5%;
 	width: 175%;
 }
 
 .searchbar {
-	left: 0;
-	margin-left: 0;
+	width: 400px;
 }
 
 nav .searchbar form .search-data {
@@ -119,7 +133,7 @@ nav .searchbar form .search-data {
 	font-weight: 500;
 	background: none;
 	border: none;
-	color: var(--navbar-form-text);
+	color: white;
 }
 
 nav form button{
@@ -133,7 +147,7 @@ nav form button{
 nav form button img {
 	width: 40px;
 	height: 40px;
-	background-color: var(--navbar-background);
+	background-color: #5f7adb;
 	border-radius: 10px;
 	padding: 5px;
 }
@@ -143,8 +157,8 @@ nav form input {
 }
 
 .threelinesmenu {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	background: transparent;
 	display: flex;
 }
@@ -152,20 +166,16 @@ nav form input {
 .allcategoriesbutton {
 	border: 0px;
 	background-color: transparent;
-	color: var(--gray-text);
 	cursor: pointer;
-	border-radius: 5px;
 	display: flex;
-	margin-left: 0;
-	margin-right: -25%;
-	padding: 7 11 7 11;
-	padding-bottom: 19.5px;
-	padding-top: 19.5px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .allcategoriesbutton p {
-	font-size: 20px;
-	padding-bottom: 0.5px;
+	font-size: 25px;
 	padding-left: 1px;
 	padding-right: 5px;
 	font-weight: 500;
@@ -174,7 +184,7 @@ nav form input {
 }
 
 .allcategoriesbutton:hover {
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,0.7);
 	transition: 1s all ease;
 }
 
@@ -248,40 +258,9 @@ nav form input {
 	transition: 1s;
 }
 
-.aboutmenav {
-	margin-left: 21%;
-	align-items: right;
-}
-
-.aboutmenav button {
-	display: inline-block;
-	border: 0;
-	background: transparent;
-	cursor: pointer;
-	border-radius: 5px;
-	width: 35px;
-	height: 35px;
-}
-
-.aboutmenav button:hover {
-	border: 1px solid gray;
-	transition: 0.3s;
-}
-
-.aboutmenav button a {
-	display: block;
-}
-
-.aboutmenav button img {
-	width: 30px;
-	height: 30px;
-	border-radius: 5px;
-	margin-left: 1px;
-	margin-top: 1px;
-}
-
 .notifications {
-	margin-left: 2%;
+	margin-left: 24%;
+	align-items: right;
 	display: flex;
 	position: relative;
 }
@@ -291,18 +270,19 @@ nav form input {
 	background: transparent;
 	cursor: pointer;
 	border-radius: 5px;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 .notifications button:hover {
-	border: 1px solid gray;
-	transition: 0.3s;
+	outline: 1px solid gray;
+	background-color: #5f7adb;
+	transition: 1s;
 }
 
 .notifications button img {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	border-radius: 5px;
 }
 
@@ -317,8 +297,8 @@ nav form input {
 	position: absolute;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	margin-top: 35px;
-	background-color: var(--navbar-background);
+	margin-top: 40px;
+	background-color: transparent;
 	color: var(--navbar-text-color);
 	padding: 10px 5px 5px 5px;
 	box-sizing: border-box;
@@ -340,11 +320,11 @@ nav form input {
 	padding: 5px;
 	display: flex;
 	cursor: pointer;
-	border-radius: 5px;
+	background-color: #2a2b3880;
 }
 
 .notification:hover {
-	background-color: rgba(0,0,0,1);
+	background-color: #a2b2ee;
 }
 
 .login {
@@ -357,18 +337,19 @@ nav form input {
 	cursor: pointer;
 	background: transparent;
 	border-radius: 5px;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 .login button:hover {
-	border: 1px solid gray;
-	transition: 0.3s;
+	outline: 1px solid gray;
+	background-color: #5f7adb;
+	transition: 1s;
 }
 
 .login button img {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	border-radius: 5px;
 	background: transparent;
 }
@@ -383,8 +364,8 @@ nav form input {
 	cursor: pointer;
 	background: transparent;
 	border-radius: 5px;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 .darkmode {
@@ -427,21 +408,17 @@ nav form input {
 
 #moon {
 	background: transparent;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	border-radius: 5px;
-	margin-bottom: 1px;
-	margin-left: 1px;
 	display: none;
 }
 
 #sun {
 	background: transparent;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	border-radius: 5px;
-	margin-bottom: 1px;
-	margin-left: 1px;
 }
 
 .darkmodebutton {
@@ -453,7 +430,9 @@ nav form input {
 }
 
 .darkmodebutton:hover {
-	border: 1px solid gray;
+	outline: 1px solid gray;
+	background-color: #5f7adb;
+	transition: 1s;
 }
 
 .username, .password, .confirmpassword{
@@ -611,44 +590,39 @@ code {
 	font-size: 14px;
 }
 
+.socials {
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	background-color: #33415c;
+	box-shadow: rgba(162, 178, 238, 0.3) 0 0 10px 5px;
+	padding: .5rem;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border: 1px solid #a2b2ee;
+	border-left: none;
+}
+
+.platforms {
+	border-radius: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+
+.platforms:hover {
+	background-color: #a2b2ee;
+}
+
 .aboutme {
 	width: 50%;
 	border-radius: 20px;
-	background-color: var(--aboutme-background);
 	color: var(--aboutme-text-color);
 	padding: 15;
-	margin: auto;
-}
-
-.aboutme img {
-	width: 17%;
-	height: 17%;
-	float: left;
-	margin-right: 10px;
-}
-
-.aboutmeicons {
-	width: 50px;
-	height: 50px;
-	background-color: var(--icons-background);
-	border-radius: 10px;
-	margin: 5px;
+	margin: 0;
 	position: absolute;
-}
-
-#icon1 {
-	top: 335px;
-	left: 22%;
-}
-
-#icon2 {
-	top: 395px;
-	left: 22%;
-}
-
-#icon3 {
-	top: 455px;
-	left: 22%;
+	top: 30%;
+	left: 25%;
 }
 
 .checkbox-wrapper {
@@ -718,287 +692,10 @@ code {
 	color: white;
 }
 
-@media only screen and (min-width: 1880px) {
-	
-	nav {
-		width: 70%;
-	}
-
+.icon {
+	margin: 30px;
 }
 
-@media only screen and (max-width: 1919px) {
-	
-	.notifications-area-wrapper {
-		width: 200px;
-		left: -55px;
-		font-size: 18px;
-	}
-}
-
-@media only screen and (min-width: 1820px) and (max-width: 1879px) {
-	
-	nav {
-		width: 73%;
-	}
-
-}
-
-@media only screen and (min-width: 1700px) and (max-width: 1819px) {
-
-	nav {
-		width: 77%;
-	}
-
-}
-
-@media only screen and (min-width: 1600px) and (max-width: 1699px) {
-
-	nav {
-		width: 80%;
-	}
-
-}
-
-@media only screen and (max-width: 1650px) {
-	
-	.logo a {
-		max-width: 230px;
-	}
-
-	.logo a img {
-		width: 230px;
-	}
-	
-	nav form {
-		margin-left: 12%;
-		width: 185%;
-	}
-	
-	.aboutmenav {
-		margin-left: 23.5%;
-	}	
-
-	.logo {	
-		margin-left: 2%;
-		margin-right: 2%;
-	}
-	
-	.logo a {
-		width: 250px;
-		margin-left: 1.5%;
-		margin-right: 2%;
-	}
-	
-	.notifications {
-		margin-left: 1.5%;
-	}
-	
-	.login {
-		margin-left: 1.5%;
-	}
-	
-	.darkmodenav {
-		margin-left: 1.5%;
-		margin-right: 2%;
-	}
-	
-}
-
-@media only screen and (min-width: 1500px) and (max-width: 1599px) {
-
-	nav {
-		width: 83%;
-	}
-
-}
-
-@media only screen and (min-width: 1400px) and (max-width: 1499px) {
-
-	nav {
-		width: 87%;
-	}
-
-}
-
-@media only screen and (max-width: 1450px) { 
-
-	nav form {
-		margin-left: 15%;
-		width: 190%;
-	}
-	
-	.aboutmenav {
-		margin-left: 24%;
-	}	
-
-	#icon1, #icon2, #icon3 {
-		left: 21%;
-	}
-}
-
-@media only screen and (min-width: 1300px) and (max-width: 1399px) {
-
-	nav {
-		width: 90%;
-	}
-
-}
-
-@media only screen and (max-width: 1350px) { 
-	
-	nav {
-		width: 100%;
-	}
-
-	nav form {
-		margin-left: 25%;
-		width: 200%;
-	}
-	
-	.aboutmenav {
-		margin-left: 26%;
-	}	
-
-	.dropdown {
-		width: 20%;
-		height: 25%;
-	}
-
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1299px) {
-
-	nav {
-		width: 93%;
-	}
-
-	nav form {
-		margin-left: 20%;
-		width: 220%;
-	}
-}
-
-@media only screen and (max-width: 1250px) { 
-	
-	nav form {
-		margin-left: 20%;
-		width: 215%;
-	}
-
-	.aboutmenav {
-		margin-left: 24%;
-	}	
-
-	.dropdown {
-		width: 25%;
-	}
-
-}
-
-@media only screen and (min-width: 1100px) and (max-width: 1199px) {
-
-	nav {
-		width: 97%;
-	}
-	
-}
-
-@media only screen and (max-width: 1150px) { 
-
-	nav {
-		width: 100%;
-	}
-
-	nav form {
-		margin-left: 20%;
-		width: 220%;
-	}
-	
-	.aboutmenav {
-		margin-left: 24%;
-	}	
-
-	#icon1, #icon2, #icon3 {
-		left: 20%;
-	}
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1099px) {	
-	nav form {
-		margin-left: 20%;
-		width: 215%;
-	}
-		
-	.aboutmenav {
-		margin-left: 22%;
-	}	
-}
-
-@media only screen and (max-width: 1050px) { 	
-	nav form {
-		margin-left: 30%;
-		width: 205%;
-	}
-		
-	.aboutmenav {
-		margin-left: 21%;
-	}	
-
-	.dropdown {
-		width: 35%;
-	}
-
-	.notifications-area-wrapper {
-		width: 150px;
-		left: -45px;
-	}
-	
-}
-
-@media only screen and (min-width: 950px) and (max-width: 999px) {
-	nav form {
-		margin-left: 30%;
-		width: 200%;
-	}
-	
-	.aboutmenav {
-		margin-left: 18.5%;
-	}		
-}
-
-@media only screen and (min-width: 900px) and (max-width: 949px) {
-	nav form {
-		margin-left: 30%;
-		width: 230%;
-	}
-	
-	.aboutmenav {
-		margin-left: 18.5%;
-	}		
-}
-
-@media only screen and (min-width: 800px) and (max-width: 899px) {
-
-	.logo a {
-		max-width: 200px;
-	}
-
-	.logo a img {
-		width: 200px;
-	}
-
-	nav form {
-		margin-left: 13%;
-		width: 150%;
-	}
-	
-	.aboutmenav {
-		margin-left: 11%;
-	}		
-
-	.checkbox {
-		margin: 2em;
-		width: 150px;
-		height: 150px;
-	}
+.notifications {
+	margin-left: 580px;
 }
