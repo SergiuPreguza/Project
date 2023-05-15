@@ -1,5 +1,7 @@
-<DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,84 +15,86 @@
     <link rel="icon" type="image/x-icon" href="./Images/keyboard.png">
     <title>Keyboard</title>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">
-            <a href="./index.html"><img src="./Images/logo.png"  alt="Project M"></a>
-        </div>
-            
-        <div class="allcategories">
-            <button class="allcategoriesbutton">
-                <img src="./Images/menuthreelines.png" alt="Three Lines" class="threelinesmenu">
-                <p>All categories</p>
-            </button>
+<nav id="main-page-nav">
+    <div class="logo">
+        <a href="./index.html">
+            <span>Sergiu Preguza</span>
+        </a>
+    </div>
+                
+    <div class="allcategories">
     
-            <div class="dropdown" id="dropdown">
-                <img src="./Images/checkbox.png" class="dropdownimage1" id="dropdownimage1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
-                <img src="./Images/keyboard.png" class="dropdownimage2" id="dropdownimage2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">
-                <img src="./Images/futureproject.png" class="dropdownimage3" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
-    
-                <button class="drp-btn drp-btn-1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
-                <a href="./checkboxes.html"><p class="dropdown-text">Checkboxes Project</p></a>
-                </button>
-    
-                <button class="drp-btn drp-btn-2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">	
-                <a href="./keyboard.html"><p class="dropdown-text">Keyboard Project</p></a>
-                </button>
-    
-                <button class="drp-btn drp-btn-3" onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
-                <a href="./futureproject.html"><p class="dropdown-text">Future Project</p></a>
-                </button>
-            </div>
-    
-        </div>
-            
-        <div class="searchbar">
-            <form action="https://google.com/search" method="get">
-                <input type="text" class="search-data" name="q" placeholder="Search...">
-                <button type="submit" class="search">
-                    <img src="./Images/search.png" title="Căutare">
-                </button>
-            </form>
-        </div>
+        <button class="allcategoriesbutton">
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/menu--v1.png" alt="Three Lines" class="threelinesmenu"/>
+            <p>Projects</p>
+        </button>
         
-        <div class="aboutmenav">
-            <button>	
-                <a href="./checkboxes.html"><img src="./Images/aboutme.png" alt="About me" title="About me"></a>
+        <div class="dropdown" id="dropdown">
+    
+            <img src="./Images/checkbox.png" class="dropdownimage1" id="dropdownimage1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
+            <img src="./Images/keyboard.png" class="dropdownimage2" id="dropdownimage2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">
+            <img src="./Images/futureproject.png" class="dropdownimage3" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
+        
+            <button class="drp-btn drp-btn-1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
+                <a href="./checkboxes.html"><p class="dropdown-text">Checkboxes Project</p></a>
             </button>
+        
+            <button class="drp-btn drp-btn-2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">	
+                <a href="./keyboard.html"><p class="dropdown-text">Keyboard Project</p></a>
+            </button>
+        
+            <button class="drp-btn drp-btn-3" onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
+                <a href="./futureproject.html"><p class="dropdown-text">Future Project</p></a>
+            </button>
+    
         </div>
+    
+    </div>
+                
+    <div class="searchbar">
+        <form action="https://google.com/search" method="get">
+            <input type="text" class="search-data" name="q" placeholder="Search...">
+            <button type="submit" class="search">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="Search"/>
+            </button>
+        </form>
+    </div>
+                
+    <div class="notifications icon">
             
-        <div class="notifications">
-            <button>
-                    <img src="./Images/notificationbefore.png" alt="Notifications" title="Notifications">
-            </button>
-    
-            <div class="notifications-area-wrapper">
-                <ul class="notifications-area">
-                    <li class="notification"><span>Notification 1</span></li>
-                    <hr>
-                    <li class="notification"><span>Notification 2</span></li>
-                    <hr>
-                    <li class="notification"><span>Notification 3</span></li>
-                </ul>
-            </div>
+        <button>
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/appointment-reminders--v1.png" alt="Notifications" title="Notifications"/>
+        </button>
+        
+        <div class="notifications-area-wrapper">
+            <ul class="notifications-area">
+                <li class="notification"><span>Notification 1</span></li>
+                <hr>
+                <li class="notification"><span>Notification 2</span></li>
+                <hr>
+                <li class="notification"><span>Notification 3</span></li>
+            </ul>
         </div>
     
-        <div class="login">
-            <button onclick="document.getElementById('loginform').style.display='block'">
-                <img src="./Images/authentification.png" alt="Login" title="Login">
-            </button>
-        </div>
-    
-        <div class="darkmodenav">
-            <button class="darkmodebutton" id="dark-mode-toggle">
-                <img src="./Images/moon.png" alt="Dark Mode" title="Dark Mode" id="moon">
-                <img src="./Images/sun.png" alt="Light Mode" title="Light Mode" id="sun">
-            </button>
-        </div>
-                        <script src="./JavaScript/darkmode.js"></script>
-    </nav>
+    </div>
+        
+    <div class="login icon">
+        <button onclick="document.getElementById('loginform').style.display='block'">
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="Login" title="Login"/>
+        </button>
+    </div>
+        
+    <div class="darkmodenav icon">
+        <button class="darkmodebutton" id="dark-mode-toggle">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/crescent-moon.png" alt="Dark Mode" title="Dark Mode" id="moon"/>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/sun--v1.png" alt="Light Mode" title="Light Mode" id="sun"/>
+        </button>
+    </div>
+                    <script src="./JavaScript/darkmode.js"></script>
+</nav>
                             
     <div id="loginform" class="loginform">
         <form class="loginform-content animate">
@@ -159,9 +163,37 @@
     </div>
     <script src="./keyboard-react-app/static/js/main.d829bf6d.js"></script>
 
+<div class="socials">
+
+    <div class="platforms">
+        <a class="platforms-link" href="https://github.com/SergiuPreguza" rel="noreferrer nofollow" target="_blank">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/github--v1.png" alt="Github" title="Github"/>
+        </a>
+    </div>
+    
+    <div class="platforms">
+        <a class="platforms-link" href="https://www.linkedin.com/in/sergiu-preguza-544466250/" rel="noreferrer nofollow" target="_blank">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="Linkedin" title="Linkedin"/>
+        </a>
+    </div>
+    
+    <div class="platforms">
+        <a class="platforms-link" href="mailto:preguza.sergiu@gmail.com" rel="noreferrer nofollow" target="_blank">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/gmail-new.png" alt="Gmail" title="Gmail"/>
+        </a>
+    </div>
+    
+    <div class="platforms">
+        <a class="platforms-link" href="https://www.facebook.com/sergiu.preguza.5" rel="noreferrer nofollow" target="_blank">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/facebook--v1.png" alt="Facebook" title="Facebook"/>
+        </a>
+    </div>
+    
+</div>
     
 <footer class="footer">
 	<code>v1.2.5</code> • &copy; 2022-present Sergiu Preguza. All Rights Reserved. •
 </footer>
+
 </body>
 </html>
