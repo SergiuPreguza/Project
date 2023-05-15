@@ -590,7 +590,7 @@ code {
 }
 
 .socials {
-	position: absolute;
+	position: fixed;
 	top: 45%;
 	transform: translateY(-50%);
 	background-color: #33415c;
