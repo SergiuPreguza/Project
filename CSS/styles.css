@@ -72,10 +72,8 @@ nav {
 }
 
 .logo {
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin-right: 50px;
-	margin-left: 20px;
+	margin-left: 40px;
+	margin-right: 120px;
 }
 
 .logo a {
@@ -85,6 +83,7 @@ nav {
 }
 
 .logo a span {
+	width: 17rem;
 	cursor: pointer;
 	font-size: 40px;
 	font-weight: 500;
@@ -118,12 +117,12 @@ nav form {
 	border-radius: 10px;
 	padding: 2px;
 	background-color: rgba(42,43,56,.5);
-	margin-left: 5%;
-	width: 175%;
+	margin-left: 1rem;
+	width: 44rem;
 }
 
 .searchbar {
-	width: 400px;
+	width: 100%;
 }
 
 nav .searchbar form .search-data {
@@ -157,8 +156,8 @@ nav form input {
 }
 
 .threelinesmenu {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	background: transparent;
 	display: flex;
 }
@@ -170,12 +169,12 @@ nav form input {
 	display: flex;
 	padding-left: 10px;
 	padding-right: 5px;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding-bottom: 14px;
+	padding-top: 14px;
 }
 
 .allcategoriesbutton p {
-	font-size: 25px;
+	font-size: 35px;
 	padding-left: 1px;
 	padding-right: 5px;
 	font-weight: 500;
@@ -250,7 +249,7 @@ nav form input {
 	color: var(--navbar-text-color);
 	text-align: left;
 	padding-left: 20px;
-	font-size: large;
+	font-size: 20px;
 }
 
 .dropdown .drp-btn:hover {
@@ -259,7 +258,7 @@ nav form input {
 }
 
 .notifications {
-	margin-left: 24%;
+	margin: auto;
 	align-items: right;
 	display: flex;
 	position: relative;
@@ -329,7 +328,7 @@ nav form input {
 
 .login {
 	display: flex;
-	margin-left: 25px;
+	margin-left: 2rem;
 }
 
 .login button {
@@ -355,8 +354,8 @@ nav form input {
 }
 
 .darkmodenav {
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 .darkmodenav button {
@@ -621,7 +620,7 @@ code {
 	padding: 15;
 	margin: 0;
 	position: absolute;
-	top: 30%;
+	top: 20%;
 	left: 25%;
 }
 
@@ -692,10 +691,31 @@ code {
 	color: white;
 }
 
-.icon {
-	margin: 30px;
+.transition {
+	margin-top: 2rem;
+	display: inline-block;
+	position: relative;
 }
 
-.notifications {
-	margin-left: 580px;
+.transition a {
+	text-decoration: none;
+	font-size: 1.8rem;
+	line-height: 90%;
+	letter-spacing: .15em;
+	color: var(--color-gray);
+}
+
+.transition::after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 1px;
+	bottom: -1rem;
+	width: 40%;
+	background-color: #1095c1;
+	transition: 1s ease;
+}
+
+.transition:hover::after {
+	width: 100%;
 }
