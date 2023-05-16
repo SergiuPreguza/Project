@@ -182,8 +182,8 @@ nav form input {
 	color: var(--navbar-text-color);
 }
 
-.allcategoriesbutton:hover {
-	background-color: rgba(0,0,0,0.7);
+.allcategoriesbutton:hover {	
+	background-color: #33415c;
 	transition: 1s all ease;
 }
 
@@ -203,35 +203,22 @@ nav form input {
 	font-size: 20px;
 	width: 18%;
 	height: 15%;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
 	box-sizing: border-box;
 	z-index: 1;
+	border: 1px solid #a2b2ee;
 }
 
 .drp-btn{
 	height: 33.3%;
 }
 
-.drp-btn-1 {
-	border-bottom-right-radius: 5px;
-}
-
-.drp-btn-2{
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.drp-btn-3 {
-	border-bottom-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-
-.dropdownimage1,.dropdownimage2, .dropdownimage3 {
+.dropdownimage {
+	background-color: #6E85B2;
 	display: none;
 	float: right;
 	height: 100%;
 	width: 40%;
+	border-left: 1px solid #a2b2ee;
 }
 
 .drp-btn {
@@ -253,7 +240,7 @@ nav form input {
 }
 
 .dropdown .drp-btn:hover {
-	background-color: rgba(0,0,0,0.7);
+	background-color: #33415c;
 	transition: 1s;
 }
 
@@ -311,19 +298,20 @@ nav form input {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	padding-top: 5px;
+	margin-top: 5px;
 	text-decoration: none;
+	border: 1px solid #a2b2ee;
 }
 
 .notification {
 	padding: 5px;
 	display: flex;
 	cursor: pointer;
-	background-color: #2a2b3880;
+	background-color: #1b263b;
 }
 
 .notification:hover {
-	background-color: #a2b2ee;
+	background-color: #33415c;
 }
 
 .login {
@@ -671,6 +659,7 @@ code {
 	font-weight: 700;
 	font-size: 2.8rem;
 	margin-bottom: 2rem;
+	margin-top: 1rem;
 }
 
 .skills {
@@ -687,6 +676,7 @@ code {
 	border-radius: 5px;
 	font-weight: 600;
 	color: #1095c1;
+	border: 1px solid #a2b2ee;
 }
 
 .checkbox-wrapper {
