@@ -88,14 +88,14 @@ nav {
 	font-size: 40px;
 	font-weight: 500;
 	letter-spacing: +.005em;
-	background: -webkit-linear-gradient(135deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff, #e73c7e);
-	background: linear-gradient(-45deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff, #e73c7e);
+	background: -webkit-linear-gradient(135deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff);
+	background: linear-gradient(-45deg, #8e43ed, #580ef6, #23a6d5, #5f7adb, #8000ff);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-size: 400% 400%;
-	-webkit-animation: gradient 3s ease infinite;
-	animation: gradient 3s ease infinite;
+	-webkit-animation: gradient 5s ease infinite;
+	animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
@@ -528,7 +528,8 @@ nav form input {
 	margin-top: 25px;
 }
 
-.loginform-content .username, .loginform-content .password, .signupform-content .username, .signupform-content .password {
+.loginform-content .username, .loginform-content .password, 
+.signupform-content .username, .signupform-content .password {
 	margin-bottom: 20px;
 }
 
@@ -613,15 +614,79 @@ code {
 	background-color: #a2b2ee;
 }
 
+.main-page-wrapper {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 5%;
+	width: 75%;
+	height: auto;
+	margin: 10% auto;
+}
+
 .aboutme {
-	width: 50%;
-	border-radius: 20px;
+	width: 100%;
 	color: var(--aboutme-text-color);
-	padding: 15;
-	margin: 0;
+}
+
+.aboutme svg {
+	margin-bottom: 0.5rem;
+}
+
+.transition {
+	margin-top: 1.5rem;
+	display: inline-block;
+	position: relative;
+	transition: 1s ease;
+}
+
+.transition a {
+	text-decoration: none;
+	font-size: 1.8rem;
+	line-height: 90%;
+	letter-spacing: .15em;
+	color: var(--color-gray);
+}
+
+.transition::after {
+	content: "";
+	display: block;
 	position: absolute;
-	top: 20%;
-	left: 25%;
+	height: 1px;
+	bottom: -0.75rem;
+	width: 35%;
+	background-color: #1095c1;
+	transition: 1s ease;
+	pointer-events: none;
+}
+
+.transition:hover::after {
+	width: 100%;
+}
+
+.transition:hover {
+	color: #6c28ff;
+}
+
+.skills-title {
+	font-weight: 700;
+	font-size: 2.8rem;
+	margin-bottom: 2rem;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	padding: 1rem 1rem;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+	font-size: 1.6rem;
+	background: rgba(153,153,153,.2);
+	border-radius: 5px;
+	font-weight: 600;
+	color: #1095c1;
 }
 
 .checkbox-wrapper {
@@ -689,33 +754,4 @@ code {
 
 .container {
 	color: white;
-}
-
-.transition {
-	margin-top: 2rem;
-	display: inline-block;
-	position: relative;
-}
-
-.transition a {
-	text-decoration: none;
-	font-size: 1.8rem;
-	line-height: 90%;
-	letter-spacing: .15em;
-	color: var(--color-gray);
-}
-
-.transition::after {
-	content: "";
-	display: block;
-	position: absolute;
-	height: 1px;
-	bottom: -1rem;
-	width: 40%;
-	background-color: #1095c1;
-	transition: 1s ease;
-}
-
-.transition:hover::after {
-	width: 100%;
 }
