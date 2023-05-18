@@ -6,22 +6,22 @@
 	--navbar-form-background: rgba(42,43,56,.5);
 	--navbar-form-text: #5f7adb;
 	--navbar-text-color: #5f7adb;
-	--icons-background: #1f2b38;
+	--search-icon: #a2b2ee;
+	--navbar-icons-background:#a2b2ee;
+	--icons-background: #33415c;
+	--icons-background-hover: #a2b2ee;
 	--aboutme-background: 	#1f2b38;
 	--aboutme-text-color: #a1aab1;
-	--navbar-form-text-color: #a1aab1;
-	--text-color: #a1aab1;
-	--login-background: hsl(210deg, 38%, 15%);
-	--login-text-color: #a1aab1;
-	--login-border: white;
-	--dark-blue-text: #10566f;
-	--color-blue: rgb(97, 123, 255);
-	--light-blue-text: #1095c1;
-	--gray-text: #525b62;
-	--light-gray-text: #a1aab1;
+	--text-color: #ffffff;
+	--svg-color: rgb(204, 204, 204);
+	--login-background: #0d1b2a;
+	--login-text-color: #ffffff;
+	--skills-background: rgba(153,153,153,.2);
+	--navbar-dropdowns-hover: #33415c;
+	--border: #a2b2ee;
+	--projects-hover-color: #6c28ff;
 	--red: #ff3535;
 	--green: #439747;
-	--checkbox-border: hsl(210deg, 38%, 15%);
 }
 
 * {
@@ -49,6 +49,7 @@ body {
 	text-align: center;	
 	font-size: 18px;
 	display: block;
+	color: var(--text-color);
 }
 
 .absolute-footer {
@@ -60,6 +61,7 @@ body {
 	font-size: 18px;
 	display: block;
 	position: absolute;
+	color: var(--text-color);
 }
 
 nav {
@@ -113,10 +115,10 @@ nav {
 nav form {
 	display: flex;
 	height: 46px;
-	border: 1px solid #a2b2ee;
+	border: 1px solid var(--border);
 	border-radius: 10px;
 	padding: 2px;
-	background-color: rgba(42,43,56,.5);
+	background-color: var(--navbar-form-background);
 	margin-left: 1rem;
 	width: 44rem;
 }
@@ -132,7 +134,7 @@ nav .searchbar form .search-data {
 	font-weight: 500;
 	background: none;
 	border: none;
-	color: white;
+	color: var(--navbar-form-text);
 }
 
 nav form button{
@@ -146,9 +148,10 @@ nav form button{
 nav form button img {
 	width: 40px;
 	height: 40px;
-	background-color: #5f7adb;
+	background-color: var(--search-icon);
 	border-radius: 10px;
 	padding: 5px;
+	border: 1px solid var(--border);
 }
 
 nav form input {
@@ -183,8 +186,8 @@ nav form input {
 }
 
 .allcategoriesbutton:hover {	
-	background-color: #33415c;
-	transition: 1s all ease;
+	background-color: var(--navbar-dropdowns-hover);
+	transition: all 0.5s ease;
 }
 
 .allcategoriesbutton:hover .allcategories, .allcategoriesbutton:hover .allcategoriesbutton p{
@@ -205,7 +208,7 @@ nav form input {
 	height: 15%;
 	box-sizing: border-box;
 	z-index: 1;
-	border: 1px solid #a2b2ee;
+	border: 1px solid var(--border);
 }
 
 .drp-btn{
@@ -213,12 +216,12 @@ nav form input {
 }
 
 .dropdownimage {
-	background-color: #6E85B2;
+	background-color: #B6C9F0;
 	display: none;
 	float: right;
 	height: 100%;
 	width: 40%;
-	border-left: 1px solid #a2b2ee;
+	border-left: 1px solid var(--border);
 }
 
 .drp-btn {
@@ -240,8 +243,8 @@ nav form input {
 }
 
 .dropdown .drp-btn:hover {
-	background-color: #33415c;
-	transition: 1s;
+	background-color: var(--navbar-dropdowns-hover);
+	transition: all 0.5s ease;
 }
 
 .notifications {
@@ -261,9 +264,9 @@ nav form input {
 }
 
 .notifications button:hover {
-	outline: 1px solid gray;
-	background-color: #5f7adb;
-	transition: 1s;
+	outline: 1px solid var(--border);
+	background-color: var(--navbar-icons-background);
+	transition: all 0.5s ease;
 }
 
 .notifications button img {
@@ -300,18 +303,19 @@ nav form input {
 	padding: 0;
 	margin-top: 5px;
 	text-decoration: none;
-	border: 1px solid #a2b2ee;
+	border: 1px solid var(--border);
 }
 
 .notification {
 	padding: 5px;
 	display: flex;
 	cursor: pointer;
-	background-color: #1b263b;
+	background-color: var(--navbar-background);
 }
 
 .notification:hover {
-	background-color: #33415c;
+	background-color: var(--navbar-dropdowns-hover);
+	transition: all 0.5s ease;
 }
 
 .login {
@@ -329,9 +333,9 @@ nav form input {
 }
 
 .login button:hover {
-	outline: 1px solid gray;
-	background-color: #5f7adb;
-	transition: 1s;
+	outline: 1px solid var(--border);
+	background-color: var(--navbar-icons-background);
+	transition: all 0.5s ease;
 }
 
 .login button img {
@@ -356,40 +360,54 @@ nav form input {
 }
 
 .darkmode {
-	--navbar-background: hsl(210deg, 38%, 15%);
-	--navbar-text-color: #a1aab1;
-	--navbar-form-background: hsl(210deg, 30%, 8%);
-	--navbar-form-text: #a1aab1;
-	--icons-background: #1f2b38;
-	--aboutme-background: #1f2b38;
+	--white: #ffffff;
+	--black: #000000;
+	--background: #0d1b2a;
+	--navbar-background: #1b263b;
+	--navbar-form-background: rgba(42,43,56,.5);
+	--navbar-form-text: #5f7adb;
+	--navbar-text-color: #5f7adb;
+	--search-icon: #a2b2ee;
+	--navbar-icons-background:#a2b2ee;
+	--icons-background: #33415c;
+	--icons-background-hover: #a2b2ee;
+	--aboutme-background: 	#1f2b38;
 	--aboutme-text-color: #a1aab1;
-	--login-background: hsl(210deg, 30%, 8%);
-	--login-text-color: #a1aab1;
-	--login-border: white;
-	--checkbox-border: hsl(210deg, 30%, 15%);;
-	background-color: var(--background);
-	color: var(--light-gray-text);
+	--text-color: #ffffff;
+	--svg-color: rgb(204, 204, 204);
+	--login-background: #0d1b2a;
+	--login-text-color: #ffffff;
+	--skills-background: rgba(153,153,153,.2);
+	--navbar-dropdowns-hover: #33415c;
+	--border: #a2b2ee;
+	--projects-hover-color: #6c28ff;
+	--red: #ff3535;
+	--green: #439747;
 	transition: 0.3s;
-
 }
 
 .lightmode {
-	--navbar-background: #232023;
-	--navbar-text-color: white;
-	--navbar-form-background: rgb(51, 51, 51);
-	--navbar-form-text: white;
-	--dark-blue-background: #467790;
-	--light-blue-text: black;
-	--dark-blue-text: black;
-	--icons-background: rgb(60, 60, 60);
+	--background: #ffffff;
+	--navbar-background: #B6C9F0;
+	--navbar-text-color: #000000;
+	--navbar-form-background: #DAEAF1;
+	--navbar-form-text: #000000;
+	--search-icon: #96BAFF;
+	--navbar-icons-background:#6ea1ff;
+	--icons-background: #B6C9F0;
+	--icons-background-hover: #F9F3F3;
 	--aboutme-background: rgb(45, 45, 45);
 	--aboutme-text-color: white;
-	--login-background: rgb(180, 180, 180);
+	--text-color: #555555;
+	--svg-color: #1095c1;
+	--login-background: rgb(220, 220, 220);
 	--login-text-color: black;
-	--login-border: black;
-	--checkbox-border: #a1aab1;
-	background-color: var(--white);
-	color: var(--black);
+	--skills-background: rgba(153,153,153,.4);
+	--navbar-dropdowns-hover: #6ea1ff;
+	--border: #143F6B;
+	--projects-hover-color: #5800FF;
+	--red: #ff3535;
+	--green: #439747;
 	transition: 0.3s;
 }
 
@@ -417,9 +435,9 @@ nav form input {
 }
 
 .darkmodebutton:hover {
-	outline: 1px solid gray;
-	background-color: #5f7adb;
-	transition: 1s;
+	outline: 1px solid var(--border);
+	background-color: var(--navbar-icons-background);
+	transition: all 0.5s ease;
 }
 
 .username, .password, .confirmpassword{
@@ -431,6 +449,7 @@ nav form input {
 	box-sizing: border-box;
 	border-radius: 10px;
 	color: var(--black);
+	border: 1px solid var(--border);
 }
 
 .submitbutton, .cancelbutton {
@@ -490,9 +509,9 @@ nav form input {
 	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
-	border: 1px solid var(--login-border);
+	border: 1px solid var(--border);
 	width: 25%;
-	height: 415px;
+	height: 43%;
 	border-radius: 25px;
 	scroll-behavior: none;
 }
@@ -501,9 +520,9 @@ nav form input {
 	background-color: var(--login-background);
 	margin: 10% auto 15% auto;
 	padding: 10px 15px;
-	border: 1px solid var(--login-border);
+	border: 1px solid var(--border);
 	width: 25%;
-	height: 500px;
+	height: 53%;
 	border-radius: 25px;
 }
 
@@ -516,9 +535,12 @@ nav form input {
 	margin-top: 25px;
 }
 
-.loginform-content .username, .loginform-content .password, 
+.loginform-content .username, .loginform-content .password {
+	margin-bottom: 10px;
+}
+
 .signupform-content .username, .signupform-content .password {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .signupusername {
@@ -540,10 +562,12 @@ nav form input {
 	float: right;
 	margin-right: 5px;
 	font-size: 20px;
+	color: var(--login-text-color);
 }
 
 .remember {
 	font-size: 15px;
+	color: var(--login-text-color);
 }
 
 .xbutton:hover{
@@ -568,6 +592,7 @@ nav form input {
 .newuser {
 	font-size: 16px;
 	text-align: center;
+	color: var(--login-text-color);
 }
 
 #message {
@@ -582,12 +607,12 @@ code {
 	position: fixed;
 	top: 45%;
 	transform: translateY(-50%);
-	background-color: #33415c;
+	background-color: var(--icons-background);
 	box-shadow: rgba(162, 178, 238, 0.3) 0 0 10px 5px;
 	padding: .5rem;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
-	border: 1px solid #a2b2ee;
+	border: 1px solid var(--border);
 	border-left: none;
 }
 
@@ -599,7 +624,8 @@ code {
 }
 
 .platforms:hover {
-	background-color: #a2b2ee;
+	background-color: var(--icons-background-hover);
+	transition: all 0.5s ease;
 }
 
 .main-page-wrapper {
@@ -613,33 +639,38 @@ code {
 
 .aboutme {
 	width: 100%;
-	color: var(--aboutme-text-color);
+	color: var(--text-color);
 }
 
 .aboutme svg {
 	margin-bottom: 0.5rem;
 }
 
-.transition {
+.aboutme svg path {
+	stroke: var(--svg-color);
+	fill: var(--svg-color);
+}
+
+.projects {
 	margin-top: 1.5rem;
 	display: inline-block;
 	position: relative;
-	transition: 1s ease;
+	transition: all 1s ease;
 }
 
-.transition a {
+.projects a {
 	text-decoration: none;
 	font-size: 1.8rem;
 	line-height: 90%;
 	letter-spacing: .15em;
-	color: var(--color-gray);
+	color: var(--text-color);
 }
 
-.transition::after {
+.projects::after {
 	content: "";
 	display: block;
 	position: absolute;
-	height: 1px;
+	height: 2px;
 	bottom: -0.75rem;
 	width: 35%;
 	background-color: #1095c1;
@@ -647,12 +678,13 @@ code {
 	pointer-events: none;
 }
 
-.transition:hover::after {
+.projects:hover::after {
 	width: 100%;
 }
 
-.transition:hover {
-	color: #6c28ff;
+.projects a:hover {
+	color: var(--projects-hover-color);
+	transition: all 1s ease;
 }
 
 .skills-title {
@@ -660,6 +692,7 @@ code {
 	font-size: 2.8rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
+	color: var(--text-color);
 }
 
 .skills {
@@ -672,11 +705,11 @@ code {
 	margin-bottom: 1rem;
 	margin-right: 1rem;
 	font-size: 1.6rem;
-	background: rgba(153,153,153,.2);
+	background: var(--skills-background);
 	border-radius: 5px;
 	font-weight: 600;
 	color: #1095c1;
-	border: 1px solid #a2b2ee;
+	border: 1px solid var(--border);
 }
 
 .checkbox-wrapper {
@@ -706,13 +739,13 @@ code {
 
 .credits {
 	font-size: small;
-	color: var(--gray-text);
+	color: var(--text-color);
 	padding-top: 25px;
 	cursor: auto;
 }
 
 .checkbox:hover {
-	border-color: var(--checkbox-border);
+	border-color: var(--border);
 	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
 	cursor: pointer;
 }
