@@ -20,6 +20,7 @@
 	--navbar-dropdowns-hover: #33415c;
 	--border: #a2b2ee;
 	--projects-hover-color: #6c28ff;
+	--projects-description-background: #1b263b;
 	--red: #ff3535;
 	--green: #439747;
 }
@@ -204,7 +205,7 @@ nav form input {
 	background-color: var(--navbar-background);
 	box-shadow: 20px rgba(0,0,0,0.9);
 	font-size: 20px;
-	width: 18%;
+	width: 20%;
 	height: 15%;
 	box-sizing: border-box;
 	z-index: 1;
@@ -381,6 +382,7 @@ nav form input {
 	--navbar-dropdowns-hover: #33415c;
 	--border: #a2b2ee;
 	--projects-hover-color: #6c28ff;
+	--projects-description-background: #1b263b;
 	--red: #ff3535;
 	--green: #439747;
 	transition: 0.3s;
@@ -398,7 +400,7 @@ nav form input {
 	--icons-background-hover: #F9F3F3;
 	--aboutme-background: rgb(45, 45, 45);
 	--aboutme-text-color: white;
-	--text-color: #555555;
+	--text-color: #000000;
 	--svg-color: #1095c1;
 	--login-background: rgb(220, 220, 220);
 	--login-text-color: black;
@@ -406,6 +408,7 @@ nav form input {
 	--navbar-dropdowns-hover: #6ea1ff;
 	--border: #143F6B;
 	--projects-hover-color: #5800FF;
+	--projects-description-background: #B6C9F0;
 	--red: #ff3535;
 	--green: #439747;
 	transition: 0.3s;
@@ -632,9 +635,9 @@ code {
 	display: grid;
 	grid-auto-flow: column;
 	grid-gap: 5%;
-	width: 75%;
+	width: 70%;
 	height: auto;
-	margin: 10% auto;
+	margin: 7% auto;
 }
 
 .aboutme {
@@ -643,7 +646,7 @@ code {
 }
 
 .aboutme svg {
-	margin-bottom: 0.5rem;
+	margin-bottom: 3rem;
 }
 
 .aboutme svg path {
@@ -651,8 +654,12 @@ code {
 	fill: var(--svg-color);
 }
 
+.aboutme p {
+	margin-bottom: 3rem;
+}
+
 .projects {
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 	display: inline-block;
 	position: relative;
 	transition: all 1s ease;
@@ -718,7 +725,7 @@ code {
 	display: flex;
 	flex-wrap: wrap;
 	width: 70%;
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -777,4 +784,14 @@ code {
 
 .container {
 	color: white;
+}
+
+.keyboard-project-description {
+	color: var(--text-color);
+	width: 75%;
+	margin: 2% auto;
+	padding: 1rem;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background-color: var(--projects-description-background);
 }

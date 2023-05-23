@@ -39,15 +39,15 @@
 			<img width="100" height="100" src="https://img.icons8.com/ios-filled/100/project-management.png" class="dropdownimage" id="dropdownimage3"  onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'"/>
             
             <button class="drp-btn drp-btn-1" onmouseenter="document.getElementById('dropdownimage1').style.display='block'" onmouseleave="document.getElementById('dropdownimage1').style.display='none'">
-                <a href="./checkboxes.html"><p class="dropdown-text">Checkboxes Project</p></a>
+                <a href="./checkboxes.html"><p class="dropdown-text">Project: Checkboxes</p></a>
             </button>
         
             <button class="drp-btn drp-btn-2" onmouseenter="document.getElementById('dropdownimage2').style.display='block'" onmouseleave="document.getElementById('dropdownimage2').style.display='none'">	
-                <a href="./keyboard.html"><p class="dropdown-text">Keyboard Project</p></a>
+                <a href="./keyboard.html"><p class="dropdown-text">Project: Keyboard</p></a>
             </button>
         
             <button class="drp-btn drp-btn-3" onmouseenter="document.getElementById('dropdownimage3').style.display='block'" onmouseleave="document.getElementById('dropdownimage3').style.display='none'">
-                <a href="./futureproject.html"><p class="dropdown-text">Future Project</p></a>
+                <a href="./futureproject.html"><p class="dropdown-text">Project: coming soon</p></a>
             </button>
     
         </div>
@@ -157,42 +157,58 @@
                         <script src="./JavaScript/signupform.js"></script>
     </div>
 
+    <div class="socials">
+
+        <div class="platforms">
+            <a class="platforms-link" href="https://github.com/SergiuPreguza" rel="noreferrer nofollow" target="_blank">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/github--v1.png" alt="Github" title="Github"/>
+            </a>
+        </div>
+        
+        <div class="platforms">
+            <a class="platforms-link" href="https://www.linkedin.com/in/sergiu-preguza-544466250/" rel="noreferrer nofollow" target="_blank">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="Linkedin" title="Linkedin"/>
+            </a>
+        </div>
+        
+        <div class="platforms">
+            <a class="platforms-link" href="mailto:preguza.sergiu@gmail.com" rel="noreferrer nofollow" target="_blank">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/gmail-new.png" alt="Gmail" title="Gmail"/>
+            </a>
+        </div>
+        
+        <div class="platforms">
+            <a class="platforms-link" href="https://www.facebook.com/sergiu.preguza.5" rel="noreferrer nofollow" target="_blank">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/facebook--v1.png" alt="Facebook" title="Facebook"/>
+            </a>
+        </div>
+        
+    </div>
+
+    <div class="keyboard-project-description">
+        I've created a React function component that renders a virtual keyboard layout. 
+        The component uses the useState hook to maintain the state of each key on the keyboard. 
+        The state of each key is an object that contains a state property (which determines the current state of the key), 
+        a name property (which represents the name of the key), and a class property (which represents the CSS classes that should be applied to the key).
+        <br>
+        <br>
+        The virtual keyboard layout is defined using a series of div elements. 
+        The state of each key is used to determine the CSS classes that should be applied to the key. 
+        The onMouseDown event of each key is used to update the state of the corresponding key when it is pressed. 
+        There are three different states, each one should change the color of the key to a different one: default (gray), pressed (blue) and released (green). 
+        I then proceed to extend this functionality so that the pressed state remains active for 3 seconds and then falls back to the released state. 
+        There is also a timer that resets all the pressed keys' state back to default every 60 seconds. 
+        The repeat button when pressed will simulate the pressing of all the keys that were previously pressed, with a delay of 200ms between each press, skipping the pressed state.
+    </div>
+
     <div class="container">
         <div class="wrapper" id="root">
         </div>
     </div>
     <script src="./keyboard-react-app/static/js/main.d829bf6d.js"></script>
-
-<div class="socials">
-
-    <div class="platforms">
-        <a class="platforms-link" href="https://github.com/SergiuPreguza" rel="noreferrer nofollow" target="_blank">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/github--v1.png" alt="Github" title="Github"/>
-        </a>
-    </div>
-    
-    <div class="platforms">
-        <a class="platforms-link" href="https://www.linkedin.com/in/sergiu-preguza-544466250/" rel="noreferrer nofollow" target="_blank">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="Linkedin" title="Linkedin"/>
-        </a>
-    </div>
-    
-    <div class="platforms">
-        <a class="platforms-link" href="mailto:preguza.sergiu@gmail.com" rel="noreferrer nofollow" target="_blank">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/gmail-new.png" alt="Gmail" title="Gmail"/>
-        </a>
-    </div>
-    
-    <div class="platforms">
-        <a class="platforms-link" href="https://www.facebook.com/sergiu.preguza.5" rel="noreferrer nofollow" target="_blank">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/facebook--v1.png" alt="Facebook" title="Facebook"/>
-        </a>
-    </div>
-    
-</div>
     
 <footer class="footer">
-	<code>v1.3.0</code> • &copy; 2022-present Sergiu Preguza. All Rights Reserved. •
+	<code>v1.3.1</code> • &copy; 2022-present Sergiu Preguza. All Rights Reserved. •
 </footer>
 
 </body>
